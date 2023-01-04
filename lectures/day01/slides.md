@@ -1,27 +1,44 @@
 
-<!-- .slide:data-background="#000000" -->
 # Python Fundamentals
-
 ---
-
-## Python Syntax
-
+# Syntax
 --
-
-whitespace
-
---
-
-code blocks
-
---
-
-pass
+## Indentation
+## Block of code
 ---
-
-
-## Data Types
-
+# Data Types
+--
+## Primitive
+- Integers
+- Strings
+- Booleans
+- None
+--
+## Composite
+- Lists
+- Dictionaries
+- Tuples
 ---
-
-$\sqrt{2}$
+# Conditionals
+--
+## `if`, `elif`, `else`
+## chaining conditional statements
+---
+# Loops
+--
+## for loops
+## using with range
+## using with composite types
+---
+# Built In Methods
+--
+## print()
+## len()
+## conversions: str(), int()
+## range()
+---
+# Functions
+--
+## parameters
+## arguments
+## return vs print
