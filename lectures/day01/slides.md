@@ -41,4 +41,4 @@
 --
 ## parameters
 ## arguments
-## return vs print
+## return vs. print
