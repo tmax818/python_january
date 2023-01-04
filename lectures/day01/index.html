@@ -1,336 +1,72 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
 
-    <meta name="description" content="Coding Dojo" />
-    <meta name="author" content="Tyler Maxwell" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<head>
+  <meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Coding Dojo" />
+  <meta name="author" content="Tyler Maxwell" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <link rel="stylesheet" href="../../dist/reset.css" />
-    <link rel="stylesheet" href="../../dist/reveal.css" />
-    <link rel="stylesheet" href="../../dist/theme/black.css" id="theme" />
-    <link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <section>
-          <a href="#">
-            <img
-              src="./../../images/coding_dojo_logo_white.png"
-              alt="python logo"
-              style="
+  <link rel="stylesheet" href="../../dist/reset.css" />
+  <link rel="stylesheet" href="../../dist/reveal.css" />
+  <link rel="stylesheet" href="../../dist/theme/black.css" id="theme" />
+  <link rel="stylesheet" href="../../plugin/highlight/monokai.css" />
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <a href="#">
+          <img src="./../../images/coding_dojo_logo_white.png" alt="python logo" style="
                 height: 200px;
                 margin: 0 auto 4rem auto;
                 background: transparent;
-              "
-              class="demo-logo"
-            />
-          </a>
-        </section>
+              " class="demo-logo" />
+        </a>
+      </section>
 
-        <section>
-            <h1>Day 1</h1>
-            <img
-              src="./../../images/python-logo.png"
-              alt="python logo"
-              style="
+      <section>
+        <h1>Day 1</h1>
+        <img src="./../../images/python-logo.png" alt="python logo" style="
                 height: 200px;
                 margin: 0 auto 4rem auto;
                 background: transparent;
-              "
-              class="fragment"
-            />
-        </section>
-
-        <section>
-          <section>
-            <h2>Assignments</h2>
-            <p><a href="https://github.com/tmax818/hello_world_python/archive/refs/heads/main.zip" download>hello world</a></p>
-            <p><a href="https://github.com/tmax818/for_loop_basics_i_python/archive/refs/heads/main.zip" download>For Loop Basics I</a></p>
-            <p><a href="https://github.com/tmax818/functions_basics_i_python/archive/refs/heads/main.zip" download>Function Basics I</a></p>
-            <p><a href="https://github.com/tmax818/functions_basics_ii_python/archive/refs/heads/main.zip" download>Function Basics II</a></p>
-            <p><a href="https://github.com/tmax818/nested_dictionaries_and_lists_python/archive/refs/heads/main.zip" download>Nested Dictionaries & Lists</a></p>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Data Types</h2>
-            <p class="fragment">primative</p>
-            <p class="fragment">composite</p>
-          </section>
-
-          
-        </section>
-        
-        <section>
-
-            <section>
-              <h2>Primative</h2>
-            <p class="fragment">Numbers</p>
-            <p class="fragment">Booleans</p>
-            <p class="fragment">None</p>
-            <p class="fragment">Strings</p>
-          </section>
-          
-          <section data-auto-animate>
-            <h2 data-id="code-title">numbers</h2>
-            <pre data-id="code-animation"><code class="hljs" data-trim>
-              int_number = 42
-            </code></pre>
-          </section>
-          
-          <section data-auto-animate>
-            <h2 data-id="code-title">floats</h2>
-            <pre data-id="code-animation"><code class="hljs" data-trim>
-              int_number = 42
-              float_number = 3.14
-            </code></pre>
-          </section>
-          
-          <section data-auto-animate>
-            <h2 data-id="code-title">booleans</h2>
-            <pre data-id="code-animation"><code class="hljs" data-trim>
-              is_logged_in = True
-            </code></pre>
-          </section>
-          
-          <section data-auto-animate>
-            <h2 data-id="code-title">booleans</h2>
-            <pre data-id="code-animation"><code class="hljs" data-trim>
-              is_logged_in = False
-            </code></pre>
-          </section>
-
-          <section data-auto-animate>
-            <h2 data-id="code-title"><code>None</code></h2>
-            <pre data-id="code-animation"><code class="hljs" data-trim>
-              checking_balance = None
-            </code></pre>
-          </section>
-
-          <section data-auto-animate>
-            <h2 data-id="code-title"><code>None</code></h2>
-            <pre data-id="code-animation"><code class="hljs" data-trim>
-              checking_balance = 0
-            </code></pre>
-          </section>
-          
-          <section data-auto-animate>
-            <h2 data-id="code-title">strings</h2>
-            <pre data-id="code-animation"><code class="hljs" data-trim>
-              name = "Jenny"
-            </code></pre>
-          </section>
-          
-          <section data-auto-animate>
-            <h2 data-id="code-title">strings</h2>
-            <pre data-id="code-animation"><code class="hljs" data-trim>
-              name = "Jenny"
-              phone = "867-5309"
-            </code></pre>
-          </section>
-          
-          <section data-auto-animate>
-            <h2 data-id="code-title">strings</h2>
-            <pre data-id="code-animation"><code class="hljs" data-trim>
-              name = "Jenny"
-              phone = "867-5309"
-              f"{name}, I got your number: {phone}."
-            </code></pre>
-          </section>
-          
-      </section>
-        
-        <section data-auto-animate>
-					<h2 data-id="code-title">strings</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            name = "Jenny"
-            phone = "867-5309"
-            f"{name}, I got your number: {phone}."
-            #=> Jenny, I got your number: 867-5309.
-					</code></pre>
-				</section>
-
-			<section>
-        <a href="https://github.com/tmax818/hello_world_python">Hello World</a>
+              " class="fragment" />
       </section>
 
-      <section>
-        <section>
-          <h2>Data Types</h2>
-          <p class="fragment">primative</p>
-          <p class="fragment">composite</p>
-        </section>
-
-        <section>
-          <h2>Composite</h2>
-          <p class="fragment">lists</p>
-          <p class="fragment">dictionaries</p>
-        </section>
-
-      </section>
-        
-      <section data-markdown="lists.md"
-      data-separator="^---"
-      data-separator-vertical="^--"
-      data-separator-notes="^note:"
-      data-charset="iso-8859-15">
-      </section>
-
-      <section>
-
-        <section data-auto-animate>
-					<h2 data-id="code-title">List</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            fruits = ['apple', 'banana', 'strawberry']
-					</code></pre>
-				</section>
-
-        <section data-auto-animate>
-					<h2 data-id="code-title">List</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            fruits = ['apple', 'banana', 'strawberry']
-            fruits[2] = 'blueberry'
-					</code></pre>
-				</section>
-
-        <section data-auto-animate>
-					<h2 data-id="code-title">List</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            fruits = ['apple', 'banana', 'strawberry']
-            fruits[2] = 'blueberry'
-            print(fruits)
-					</code></pre>
-				</section>
-
-        <section data-auto-animate>
-					<h2 data-id="code-title">List</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            fruits = ['apple', 'banana', 'strawberry']
-            fruits[2] = 'blueberry'
-            print(fruits)
-            #=> ['apple', 'banana', 'blueberry']
-					</code></pre>
-				</section>
-      </section>
-
-      <section>
-        <h2>Composite</h2>
-        <p class="fragment">lists</p>
-        <p class="fragment">dictionaries</p>
-      </section>
-
-      <section>
-        <section data-auto-animate>
-					<h2 data-id="code-title">Dictionaries</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            person_list = ['Tyler', 39, True]
-					</code></pre>
-				</section>
-
-        <section data-auto-animate>
-					<h2 data-id="code-title">Dictionaries</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            person_list = ['Tyler', 39, True]
-            person_dict = {'name': 'Tyler', 'age': 39, 'is_admin': True}
-					</code></pre>
-				</section>
-
-        <section data-auto-animate>
-					<h2 data-id="code-title">Dictionaries</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            person_list = ['Tyler', 39, True]
-            person-list[0]
-            person_dict = {'name': 'Tyler', 'age': 39, 'is_admin': True}
-					</code></pre>
-				</section>
-
-        <section data-auto-animate>
-					<h2 data-id="code-title">Dictionaries</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            person_list = ['Tyler', 39, True]
-            person-list[0]
-            # => 'Tyler'
-            person_dict = {'name': 'Tyler', 'age': 39, 'is_admin': True}
-					</code></pre>
-				</section>
-
-        <section data-auto-animate>
-					<h2 data-id="code-title">Dictionaries</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            person_list = ['Tyler', 39, True]
-            person-list[0]
-            # => 'Tyler'
-            person_dict = {'name': 'Tyler', 'age': 39, 'is_admin': True}
-            person_dict['name']
-					</code></pre>
-				</section>
-
-        <section data-auto-animate>
-					<h2 data-id="code-title">Dictionaries</h2>
-					<pre data-id="code-animation"><code class="hljs" data-trim>
-            person_list = ['Tyler', 39, True]
-            person-list[0]
-            # => 'Tyler'
-            person_dict = {'name': 'Tyler', 'age': 39, 'is_admin': True}
-            person_dict['name']
-            # => 'Tyler'
-					</code></pre>
-				</section>
-      </section>
-        
-      <section>
-        <a href="https://github.com/tmax818/nested_dictionaries_and_lists_python">Nested Dictionaries and Lists</a>
+      <section data-markdown="slides.md" data-separator="^---" data-separator-vertical="^--"
+        data-separator-notes="^note:" data-charset="iso-8859-15">
       </section>
 
 
-        <section>
-          <h3>Loops</h3>
-        </section>
 
-        <section data-markdown="05conditionalsLoops.md"
-        data-separator="^---"
-        data-separator-vertical="^--"
-        data-separator-notes="^note:"
-        data-charset="iso-8859-15">
-        </section>
+    </div>
+  </div>
+  <script src="./../../dist/reveal.js"></script>
+  <script src="./../../plugin/zoom/zoom.js"></script>
+  <script src="./../../plugin/notes/notes.js"></script>
+  <script src="./../../plugin/search/search.js"></script>
+  <script src="./../../plugin/markdown/markdown.js"></script>
+  <script src="./../../plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      plugins: [
+        RevealZoom,
+        RevealNotes,
+        RevealSearch,
+        RevealMarkdown,
+        RevealHighlight]
+    });
+  </script>
+</body>
 
-        <section data-markdown="06functions.md"
-        data-separator="^---"
-        data-separator-vertical="^--"
-        data-separator-notes="^note:"
-        data-charset="iso-8859-15">
-        </section>
-
-        
-
-      </div>
-    </div>    
-<script src="./../../dist/reveal.js"></script>
-<script src="./../../plugin/zoom/zoom.js"></script>
-<script src="./../../plugin/notes/notes.js"></script>
-<script src="./../../plugin/search/search.js"></script>
-<script src="./../../plugin/markdown/markdown.js"></script>
-<script src="./../../plugin/highlight/highlight.js"></script>
-<script>
-  Reveal.initialize({
-    controls: true,
-				progress: true,
-				center: true,
-				hash: true,
-    plugins: [           
-          RevealZoom,
-          RevealNotes,
-          RevealSearch,
-          RevealMarkdown,
-          RevealHighlight ]
-      });
-    </script>
-  </body>
 </html>
