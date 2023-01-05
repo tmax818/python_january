@@ -1,10 +1,31 @@
+<section>
+<h1>Day 1</h1>
+<img src="./../../images/python-logo.png" alt="python logo" style="
+        height: 200px;
+        margin: 0 auto 4rem auto;
+        background: transparent;
+        " class="fragment" />
+<h2 class="fragment">Python Fundamentals</h2>
+</section>
 
-# Python Fundamentals
 ---
-# Syntax
+# Topics and Objectives
+- Python Syntax
+- Data Types
+- Conditionals
+- Loops
+- Built In Methods
+- Functions
+
+
+---
+# Python Syntax
+
+- REPL demo
 --
 ## Indentation
 ## Block of code
+## `pass` keyword
 ---
 # Data Types
 --
