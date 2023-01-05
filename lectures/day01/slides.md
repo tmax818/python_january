@@ -1,3 +1,5 @@
+
+
 <section>
 <h1>Day 1</h1>
 <img src="./../../images/python-logo.png" alt="python logo" style="
