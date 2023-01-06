@@ -1,16 +1,4 @@
 
-
-<section>
-<h1>Day 1</h1>
-<img src="./../../images/python-logo.png" alt="python logo" style="
-        height: 200px;
-        margin: 0 auto 4rem auto;
-        background: transparent;
-        " class="fragment" />
-<h2 class="fragment">Python Fundamentals</h2>
-</section>
-
----
 # Topics and Objectives
 - Python Syntax
 - Data Types
@@ -24,23 +12,41 @@
 # Python Syntax
 
 - REPL demo
+
 --
-## Indentation
-## Block of code
+## Indentation and Blocks of Code
+
+- Python uses indentation and the colon(:) to indicate blocks of code.  <!-- .element: class="fragment" -->
+
+```py
+for i in range(1000):
+        print("hello")
+``` 
+<!-- .element: class="fragment" -->
+
+--
+
 ## `pass` keyword
 ---
 # Data Types
 --
+>Everything in Python is an object.
+--
+What is an object?
+--
+>An object is an instance of a class.
+--
 ## Primitive
-- Integers
-- Strings
-- Booleans
-- None
+- Numbers <!-- .element: class="fragment" -->
+- Strings <!-- .element: class="fragment" -->
+- Booleans <!-- .element: class="fragment" -->
+- None <!-- .element: class="fragment" -->
 --
 ## Composite
 - Lists
 - Dictionaries
 - Tuples
+--
 ---
 # Conditionals
 --
@@ -55,10 +61,10 @@
 ---
 # Built In Methods
 --
-## print()
-## len()
-## conversions: str(), int()
-## range()
+## `print()`
+## `len()`
+## conversions: `str()`, `int()`
+## `range()`
 ---
 # Functions
 --
