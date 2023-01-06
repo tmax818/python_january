@@ -2,7 +2,7 @@
 <h2>Data Types</h2>
 <p class="fragment">primitive</p>
 <p class="fragment">composite</p>
-</section>    
+</section>
 
 <section>
 <h2>Primitive</h2>
