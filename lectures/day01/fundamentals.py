@@ -35,7 +35,11 @@ if True:
 
 ##### Booleans ##### 
 ##### None ##### 
-##### Strings ##### 
+##### Strings #####
+
+# ? write the three ways to create the string `eggs and spam` in Python:
+
+
 
 # TODO: Composite
 
@@ -65,17 +69,33 @@ person_dict = {'name': 'Tyler', 'age': 39, 'is_cool': True}
 ###### Tuples #######
 person_tup = 'Tyler', 39, True
 
+# ? How many methods are available for `person_tup` in Python?
+
 
 
 # TODO: Conditionals
 ###### if, elif, else
 ###### chaining conditional statements
 
+condition1 = True
+condition2 = True
+
+if condition1:
+    print("eggs and spam")
+elif condition2:
+    print("Tyler is cool!")
+else:
+    print("Lucky is cooler than Tyler!")
 
 # TODO: Loops
 ###### for loops
+
+# ? write a while loop that will print "I love Python" 100 times
+# ? write a for loop that will print "I really love Python" 100 times
+
 ###### using with range
 ###### using with composite types
+
 
 
 #TODO: Built In Methods
@@ -98,7 +118,21 @@ person_tup = 'Tyler', 39, True
 
 # TODO: Functions
 ###### parameters vs. arguments
+
+def param_arg_func(parameter):
+    the_parameter = parameter
+    print(the_parameter)
+    
+param_arg_func("argument")
+
+
 ###### return vs. print
+
+def return_func():
+    pass
+
+def print_func():
+    pass
 
 
 
