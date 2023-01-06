@@ -5,6 +5,14 @@
 </section>
 
 <section>
+<h2>Data Types</h2>
+<p class="fragment">Why worry about the type of our data?</p>
+<img class="fragment" src="./../../images/lockers.jpg" height="400px">
+</section>
+
+
+
+<section>
 <h2>Primitive</h2>
 <p class="fragment">Numbers</p>
 <p class="fragment">Booleans</p>
