@@ -33,11 +33,15 @@ if True:
 
 # ? define a variable `my_float` and assign the value of pi to it
 
-##### Booleans ##### 
+##### Booleans #####
 ##### None ##### 
 ##### Strings #####
 
-# ? write the three ways to create the string `eggs and spam` in Python:
+# ? write the three ways to create the string "The knights who say, 'Ni!'" in Python:
+
+str1 = None
+str2 = None
+str3 = None
 
 
 
@@ -94,8 +98,17 @@ else:
 # ? write a for loop that will print "I really love Python" 100 times
 
 ###### using with range
+
+# ? write a for loop using the builtin range() function
+
+
 ###### using with composite types
 
+# ? write three for loops to loop through `person_list`, `person_dict` and `person_tup`:
+
+# person_list = ['Tyler', 39, True]
+# person_dict = {'name': 'Tyler', 'age': 39, 'is_cool': True}
+# person_tup = 'Tyler', 39, True
 
 
 #TODO: Built In Methods
@@ -114,6 +127,8 @@ else:
 # ? methods above to change it to a string. 
 
 ###### range()
+
+# ? create a variable `my_range` and set it equal to the invocation of the builtin range function that will iterate 10 times.
 
 
 # TODO: Functions
