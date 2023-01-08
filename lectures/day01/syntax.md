@@ -1,6 +1,6 @@
 # Python Syntax
 
-- REPL demo
+- [REPL demo](http://localhost:8888/notebooks/demo.ipynb)
 --
 ## Indentation and Blocks of Code
 
