@@ -71,24 +71,178 @@
         data-charset="iso-8859-15">
         </section>
 
-      <section id="loops">
-        <section>
-          <h2>Loops</h2>
+        <section data-markdown="functions.md"
+        data-separator="^---"
+        data-separator-vertical="^--"
+        data-separator-notes="^note:"
+        data-charset="iso-8859-15">
         </section>
-      </section>
 
-      <section id="built_in_methods">
-        <section>
-          <h2>Built in Methods</h2>
+        <section> 
+          <section data-auto-animate>
+            <h2 data-id="code-title">Functions</h2>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def function_name():
+            </code></pre>
+          </section>
+          
+          <section data-auto-animate>
+            <h2 data-id="code-title">Functions</h2>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def function_name():
+                  pass
+            </code></pre>
+          </section>
+
+          <section data-auto-animate>
+            <h2 data-id="code-title">Functions</h2>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def function_name():
+                  print('Hello World')
+            </code></pre>
+          </section>
+
+                              
+          <section data-auto-animate>
+            <h2 data-id="code-title">Functions</h2>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def function_name():
+                  print('Hello World')
+                  for i in range(10):
+                      print(i)
+            </code></pre>
+          </section>
+
+                    
+          <section data-auto-animate>
+            <h2 data-id="code-title">Functions</h2>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def function_name():
+                  print('Hello World')
+                  for i in range(10):
+                      print(i)
+                  print('I can count!!!')
+            </code></pre>
+          </section>
+                 
+          <section data-auto-animate>
+            <h2 data-id="code-title">Function parameters and arguments</h2>
+            <pre data-id="code-animation"><code class="hljs fragment" data-trim>
+              def func_with_params(params):
+                  pass
+            </code></pre>
+          </section>
+
+                           
+          <section data-auto-animate>
+            <h2 data-id="code-title">Function parameters and arguments</h2>
+            <h3 class="fragment">a parameter is a variable we use inside our function</h3>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def func_with_params(params):
+                  print(params)
+            </code></pre>
+          </section>
+
+                                     
+          <section data-auto-animate>
+            <h2 data-id="code-title">Function parameters and arguments</h2>
+            <h3>a parameter is a variable we use inside our function</h3>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def func_with_params(params):
+                  the_arg = params # We don't write this code, 
+                                   # Python does it for us!!!
+                  print(the_arg)
+            </code></pre>
+          </section>
+
+                                     
+          <section data-auto-animate>
+            <h2 data-id="code-title">Function parameters and arguments</h2>
+            <h3>a parameter is a variable we use inside our function</h3>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def func_with_params(params):
+                  print(params)
+            </code></pre>
+          </section>
+
+                                               
+          <section data-auto-animate>
+            <h2 data-id="code-title">Function parameters and arguments</h2>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def func_with_params(params):
+                  print(params)
+            </code></pre>
+            <p class="fragment">What happens if we run this code?</p>
+            <p class="fragment">Absolutely nothing!!!</p>
+          </section>
+
+
+                                               
+          <section data-auto-animate>
+            <h2 data-id="code-title">Function parameters and arguments</h2>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def func_with_params(params):
+                  print(params)
+
+              func_with_params("The Argument")
+            </code></pre>
+          </section>
+
+                                                         
+          <section data-auto-animate>
+            <h2 data-id="code-title">Function parameters and arguments</h2>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def func_with_params(params):
+                  print(params)
+              
+              func_with_params("The Argument")
+            </code></pre>
+            <p class="fragment">'The Argument' prints to the console</p>
+          </section>
+
+                                                                   
+          <section data-auto-animate>
+            <h2 data-id="code-title">`print` vs. `return`</h2>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def func_with_params(params):
+                  print(params)
+              
+              func_value = func_with_params("The Argument")
+              print(func_value)
+            </code></pre>
+            <p class="fragment">The Argument</p>
+            <p class="fragment"><code>None</code></p>
+          </section>
+
+          <section data-auto-animate>
+            <h2 data-id="code-title">`print` vs. `return`</h2>
+            <h3 class="fragment">A function is what it returns</h3>
+            <pre data-id="code-animation"><code class="hljs fragment" data-trim>
+              def func_with_params(params):
+                  print(params)
+              
+              func_value = func_with_params("The Argument")
+              print(func_value)
+            </code></pre>
+          </section>
+
+
+          <section data-auto-animate>
+            <h2 data-id="code-title">`print` vs. `return`</h2>
+            <h3>A function is what it returns</h3>
+            <pre data-id="code-animation"><code class="hljs" data-trim>
+              def func_with_params(params):
+                  print(params)
+                  return params
+              
+              func_value = func_with_params("The Argument")
+              print(func_value)
+            </code></pre>
+            <p class="fragment">The Argument</p>
+            <p class="fragment">The Argument</p>
+          </section>
+
         </section>
-      </section>
-
-      <section id="functions">
-        <section>
-          <h2>Functions</h2>
-        </section>
-      </section>
-
 
 
     </div>
