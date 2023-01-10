@@ -1,37 +1,37 @@
 
-# ! Object Oriented Programming - OOP
+# # ! Object Oriented Programming - OOP
 
-# TODO: Class Structure
-###### constructor method -- `__init__()` ######
+# # TODO: Class Structure
+# ###### constructor method -- `__init__()` ######
 
-# ? create a `Cat` class with no instance attributes:
+# # ? create a `Cat` class with no instance attributes:
 
-class Cat:
+# class Cat:
     
-    def __init__(self, color, name):
-        self.name = name
-        self.color = color
-        self.toys = []
-        self.friend = None
+#     def __init__(self, color, name):
+#         self.name = name
+#         self.color = color
+#         self.toys = []
+#         self.friend = None
 
         
-    def get_new_toy(self, toy):
-        self.toys.append(toy)
+#     def get_new_toy(self, toy):
+#         self.toys.append(toy)
         
-    def make_friends(self, cat):
-        self.friend = cat
+#     def make_friends(self, cat):
+#         self.friend = cat
     
-    def show_everything(self):
-        print(self.name, self.toys, self.friend)
+#     def show_everything(self):
+#         print(self.name, self.toys, self.friend)
 
-luna = Cat("blue", "Luna")
-ralph = Cat("orange", "Ralph")
-# luna.get_new_toy("ball")
-# ralph.get_new_toy("mouse")
-ralph.make_friends(luna)
-# print(luna.toys)
-print(ralph.friend)
-print(luna)
+# luna = Cat("blue", "Luna")
+# ralph = Cat("orange", "Ralph")
+# # luna.get_new_toy("ball")
+# # ralph.get_new_toy("mouse")
+# ralph.make_friends(luna)
+# # print(luna.toys)
+# print(ralph.friend)
+# print(luna)
 
 
 
@@ -73,6 +73,59 @@ print(luna)
 ###### Class methods vs Instance Methods ######
 
 # ? create a `Tesla` class:
+
+class Tesla:
+    
+    LOCATION = "Freemont"
+    num_employees = 0
+    CEO = "Elon Musk"
+    cars = []
+    
+    def __init__(self, color, model, year):
+        self.color = color
+        self.model = model
+        self.year = year
+        self.mileage = 0
+        Tesla.cars.append(self)
+        
+    def drive(self, miles):
+        self.mileage += miles
+        
+    @classmethod
+    def display_all_cars(cls):
+        for car in cls.cars:
+            print(f"color: {car.color}, model: {car.model}, year: {car.year}")
+            
+    @staticmethod
+    def change_tire():
+        print("The tire is fixed")
+        
+    @staticmethod
+    def validate_cars_from_list(cars_list):
+        valid_car = True
+        for car in cars_list:
+            if car.feature == 'free-food':
+                valid_car = False
+        return valid_car
+            
+cars = [
+    {'color': 'black', 'model': 'ModelS', 'feature': 'self-driving'},
+    {'color': 'red', 'model': 'ModelY', 'feature': 'free-food'},
+]
+ahmons_tesla = Tesla("black", "ModelS", 2018)
+ahmons_tesla.mileage = 50000
+# print(ahmons_tesla)
+# ahmons_tesla.drive(100)
+# print(ahmons_tesla.mileage)
+
+vera_tesla = Tesla("gold", "3X", 2023)
+vera_tesla.change_tire()
+# print(vera_tesla)
+# vera_tesla.drive(10)
+# print(vera_tesla.mileage)
+Tesla.display_all_cars()
+        
+    
 
 # ? give the Tesla an instance method that makes sense(i.e you own a Tesla car, what should the car be able to do?).
 
