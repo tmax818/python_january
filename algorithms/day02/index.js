@@ -26,7 +26,12 @@ const expected3 = false;
  * @param {string} strB
  * @returns {boolean} If the strings are equal or not.
  */
-function caseInsensitiveStringCompare(strA, strB) {}
+function caseInsensitiveStringCompare(strA, strB) {
+    // if lengths of strings differ, return false.
+    // use toUpperCase function on both strings
+    // compare strings 
+
+}
 console.log(caseInsensitiveStringCompare(strA1, strB1))
 console.log(caseInsensitiveStringCompare(strA2, strB2))
 console.log(caseInsensitiveStringCompare(strA3, strB3))
