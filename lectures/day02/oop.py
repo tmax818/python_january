@@ -6,6 +6,39 @@
 
 # ? create a `Cat` class with no instance attributes:
 
+class Cat:
+    
+    def __init__(self, color, name):
+        self.name = name
+        self.color = color
+        self.toys = []
+        self.friend = None
+
+        
+    def get_new_toy(self, toy):
+        self.toys.append(toy)
+        
+    def make_friends(self, cat):
+        self.friend = cat
+    
+    def show_everything(self):
+        print(self.name, self.toys, self.friend)
+
+luna = Cat("blue", "Luna")
+ralph = Cat("orange", "Ralph")
+# luna.get_new_toy("ball")
+# ralph.get_new_toy("mouse")
+ralph.make_friends(luna)
+# print(luna.toys)
+print(ralph.friend)
+print(luna)
+
+
+
+# print(luna)
+# print(ralph)
+
+
 ###### instance attributes ######
 
 # ? create a `Dog` class with `name` and `breed` instance attributes:
