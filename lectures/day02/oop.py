@@ -146,3 +146,24 @@ Tesla.display_all_cars()
 ###### DON'T REPEAT YOURSELF ######
 
 
+
+
+class Employee:
+    
+    def __init__(self, name, id) -> None:
+        self.name = name
+        self.id = id
+        
+class Doctor(Employee):
+
+    def do_surgery(self):
+        print("I am a surgeon")
+
+class Custodian(Employee):
+    
+    def mop_the_floor(self):
+        print("I am cleaning up blood")
+        
+class Manager(Doctor):
+    pass
+    
