@@ -136,12 +136,40 @@ def hello_world():
 
 - The `render_template` function takes additional arguments. Any data we want to pass from the backend to our templates can be passed as additional arguments to the `render_template` function.
 
+```py
+@app.route('/')             
+def hello_world():
+    fruits = ['straberry', 'banana', 'kiwi']
+    return render_template("index.html", fruits = fruits)  
+```
+
+- The `fruits` variable will now be available in our Jinja templates.
 
 
 ## Looping with Jinja & displaying information
 
+- We can access the list stored in the `fruit` variable using Jinja
+
+```html
+    <ul>
+    {% for fruit in fruits %}
+        <li>{{fruit}}</li>
+        {% endfor %}
+    </ul>
+```
+
 # Path Variables
+
+## 4 ways
+|interpolation | file |
+|---|---|
+|`f"My name is {name}"`| inside a `.py` file|
+|`@app.route('/about/<name>/<int:num>')`| inside a `.py` file only inside `@app.route`|
+|`<h1>{{name}}</h1>`|only in `.html`|
+|||
 ## Setting up routes to accept path variables
+
+
 
 ## Sending variables from browser
 

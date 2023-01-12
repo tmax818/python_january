@@ -5,11 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+<!-- linking a javascript file -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
     <title>Index</title>
 </head>
 <body>
-
+  {{fruits}}
     <h1>It works!!!!</h1>
+    <img src="{{ url_for('static', filename='img/my_img.png') }}">
+    {% for i in range(num)  %}
+    <p>{{name}}</p>
+    {% endfor %}
+
     <ul>
         <li>one</li>
         <li>one</li>
@@ -31,12 +39,12 @@
           </tr>
         </thead>
         <tbody>
-            {% for i in range(10)  %}
+            {% for fruit in fruits  %}
             <tr>
                 <th scope="row">1</th>
-                <td>{{fruits[0]}}</td>
-                <td>{{fruits[1]}}</td>
-                <td>{{fruits[2]}}</td>
+                <td>{{fruits}}</td>
+                <td>{{fruits}}</td>
+                <td>{{fruits}}</td>
       
               </tr>
             {% endfor %}

@@ -6,9 +6,9 @@ def hello_world():
     fruits = ['straberry', 'banana', 'kiwi']
     return render_template("index.html", fruits = fruits)   # Return the string 'Hello World!' as a response
 
-@app.route('/about')
-def about():
-    return "<h1>All about Tyler</h1>"
+@app.route('/about/<name>/<int:num>')
+def about(name, num):
+    return render_template("index.html", name = name, num = num)
 
 if __name__=="__main__":    # Ensure this file is being run directly and not from a different module    
     app.run(debug=True)     # Run the app in debug mode.
