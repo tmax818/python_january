@@ -1,7 +1,7 @@
 
 # FLASK
 
-# [Virtual Environments](https://login.codingdojo.com/m/172/7219/54533)
+### [Virtual Environments](https://login.codingdojo.com/m/172/7219/54533)
 
 ## install `pipenv`
 **You only do this once!!!**
@@ -133,6 +133,10 @@ def hello_world():
 [Jinja 2](https://palletsprojects.com/p/jinja/) is the template engine for Flask. Be sure to add the [extension](https://marketplace.visualstudio.com/items?itemName=WyattFerguson.jinja2-snippet-kit) to VScode.
 
 ## Passing data from server to template
+
+- The `render_template` function takes additional arguments. Any data we want to pass from the backend to our templates can be passed as additional arguments to the `render_template` function.
+
+
 
 ## Looping with Jinja & displaying information
 
