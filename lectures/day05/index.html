@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./../../dist/reveal.css">
+    <link rel="stylesheet" href="./../../dist/theme/white.css">
+    <link rel="stylesheet" href="./../../plugin/highlight/monokai.css">
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+    <section data-markdown="slides.md"
+
+        data-separator="^---"
+        data-separator-vertical="^--"
+        data-separator-notes="^Note:"
+        data-charset="iso-8859-15">
+    </section>
+    <section>
+      <img src="users_schema.png" alt="" class="r-stretch">
+    </section>
+
+      </div>
+    </div>
+    <script src="./../../dist/reveal.js"></script>
+    <script src="./../../plugin/highlight/highlight.js"></script>
+    <script src="./../../plugin/markdown/markdown.js"></script>
+    <script>
+      Reveal.initialize({
+
+        plugins: [ RevealMarkdown, RevealHighlight ],
+    
+        controlsTutorial: true,
+      });
+    </script>
+  </body>
+</html>
