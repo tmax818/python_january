@@ -11,8 +11,9 @@
 <h1>Index Page</h1>
 <h3>Create a User</h3>
 <form action='/users' method='post'>
-    name<input type='text' name='tyler'>
-    email<input type='text' name='lucky'>
+    <input type="hidden" name="id" value="{{session.id}}">
+    name<input type='text' name='name'>
+    email<input type='text' name='email'>
     <input type='submit' value='create user'>
 </form>
 
@@ -20,6 +21,7 @@
 <p>{{session.tyler}}</p>
 
 <a href="/logout">clear session</a>
+<a href="/about">about Lucky</a>
 
 
 </body>

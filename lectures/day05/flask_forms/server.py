@@ -4,14 +4,19 @@ app.secret_key = "Any string you want: I am the princess of Canada."
 
 @app.route('/')             
 def hello_world():
+    session['id'] = 42
     return render_template('index.html')
 
 @app.route('/users', methods = ['POST'])
 def users():
-    print(request.form['lucky'])
-    session['lucky'] = request.form['lucky']
-    session['tyler'] = request.form['tyler']
+    print(request.form)
+    session['name'] = request.form['name']
+    session['email'] = request.form['email']
     return redirect('/')
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
 
 @app.route('/logout')
 def logout():
