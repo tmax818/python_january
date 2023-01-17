@@ -1,44 +1,26 @@
-// const makeFrequencyTable = require('../day06/index').makeFrequencyTable
-// console.log(makeFrequencyTable)
-
-// console.log(makeFrequencyTable(testarr))
+// https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/
 
 /* 
-  Given in an alumni interview in 2021.
-  String Encode
-  You are given a string that may contain sequences of consecutive characters.
-  Create a function to shorten a string by including the character,
-  then the number of times it appears. 
-  
-  
-  If final result is not shorter (such as "bb" => "b2" ),
-  return the original string.
-  */
+Given a non-empty array of odd length containing ints where every int but one
+has a matching pair (another int that is the same)
+return the only int that has no matching pair.
+*/
 
-  const str1 = "aaaabbcddd";
-  const expected1 = "a4b2c1d3";
-  
-  const str2 = "";
-  const expected2 = "";
-  
-  const str3 = "a";
-  const expected3 = "a";
-  
-  const str4 = "bbcc";
-  const expected4 = "bbcc";
-  
-  /**
-   * Encodes the given string such that duplicate characters appear once followed
-   * by a number representing how many times the char occurs. Only encode strings
-   * when the result yields a shorter length.
-   * - Time: O(?).
-   * - Space: O(?).
-   * @param {string} str The string to encode.
-   * @returns {string} The given string encoded.
-   */
-  function encodeStr(str) {}
+const nums1 = [1];
+const expected1 = 1;
 
-  console.log(encodeStr(str1))
-  console.log(encodeStr(str2))
-  console.log(encodeStr(str3))
-  console.log(encodeStr(str4))
+const nums2 = [5, 4, 5];
+const expected2 = 4;
+
+const nums3 = [5, 4, 3, 4, 3, 4, 5];
+const expected3 = 4; // there is a pair of 4s but one 4 has no pair.
+
+const nums4 = [5, 2, 6, 2, 3, 1, 6, 3, 2, 5, 2];
+const expected4 = 1;
+
+function oddOccurrencesInArray(nums) {}
+
+console.log(oddOccurrencesInArray(nums1), "should equal", expected1);
+console.log(oddOccurrencesInArray(nums2), "should equal", expected2);
+console.log(oddOccurrencesInArray(nums3), "should equal", expected3);
+console.log(oddOccurrencesInArray(nums4), "should equal", expected4);
