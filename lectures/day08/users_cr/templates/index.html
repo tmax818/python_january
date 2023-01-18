@@ -10,7 +10,9 @@
     {{users}}
     <h1>Users</h1>
     {% for user in users %}
-        <p>{{user.first_name}} {{user['last_name']}} email:{{user.email}}</p>
+        <p>
+            <a href="/users/{{user.id}}">
+            {{user.first_name}} {{user['last_name']}}    </a> email:{{user.email}} <a href="/users/edit/{{user.id}}">edit</a></p>
     {% endfor %}
 
 </body>
