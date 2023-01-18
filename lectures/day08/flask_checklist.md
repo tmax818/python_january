@@ -1,3 +1,5 @@
+- [ ] create ERD from wireframe
+
 - [x] make new directory for the project
 - [ ] create a virtual environment
 - [ ] activate VE
