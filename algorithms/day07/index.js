@@ -26,7 +26,12 @@
    * @param {Array<any>} values
    * @returns {Object} The object with the given keys and values.
    */
-  function zipArraysIntoMap(keys, values) {}
+  function zipArraysIntoMap(keys, values) {
+    const obj = {}
+    // code here
+    return obj
+
+  }
 
   console.log(zipArraysIntoMap(keys1, vals1))
   console.log(zipArraysIntoMap(keys2, vals2))
