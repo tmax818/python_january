@@ -22,7 +22,7 @@
 # TODO create an instance of the dojo class that will have the ninjas attribute. The attribute is a list of all that dojo's ninjas
 
 # TODO loop over the list of dictionaries returned from the database.
-    
+
 # TODO create a dictionary to hold and format the ninja's data from each dictionary.
 
 # TODO append `ninjas.`to the attributes where needed:
