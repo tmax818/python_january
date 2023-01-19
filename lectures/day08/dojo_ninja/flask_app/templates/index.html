@@ -7,12 +7,12 @@
     <title>Index</title>
 </head>
 <body>
-    {{users}}
-    <h1>Users</h1>
-    {% for user in users %}
-        <p>
-            <a href="/users/{{user.id}}">
-            {{user.first_name}} {{user['last_name']}}    </a> email:{{user.email}} <a href="/users/edit/{{user.id}}">edit</a></p>
+    {{dojos}}
+    <h1>Dojos</h1>
+    {% for dojo in dojos %}
+    <p>
+        <a href="/dojos/{{dojo.id}}">{{dojo.name}}</a>
+    </p>       
     {% endfor %}
 
 </body>

@@ -7,6 +7,14 @@
     <title>Show</title>
 </head>
 <body>
-    {{user}}
+    {{dojo.ninjas}}
+    <h1>
+        {{dojo.name}} Ninjas
+
+        {% for ninja in dojo.ninjas  %}
+            <p>{{ninja.first_name}} {{ninja.last_name}}</p>
+        {% endfor %}
+
+    </h1>
 </body>
 </html>
