@@ -27,7 +27,11 @@
    * @returns {boolean} Whether the second string is a rotated version of the 1st.
    */
   
-  function isRotation(s1, s2) {}
+  function isRotation(s1, s2) {
+    if (s1.length !== s2.length){
+      return false
+    }
+  }
   
   console.log(isRotation(strA1, strB1))
   console.log(isRotation(strA2, strB2))
