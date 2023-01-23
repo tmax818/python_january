@@ -27,7 +27,7 @@ class User:
     # TODO Write a query method to verify the email entered in the login form
     @classmethod
     def get_by_email(cls, data):
-        query = ""
+        query = "SELECT * FROM users WHERE email = %(email)s"
         result = connectToMySQL(DATABASE).query_db(query, data)
         print(result)
         if len(result) > 0:
