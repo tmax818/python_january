@@ -16,11 +16,13 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
+    <h1>Edit recipe</h1>
+    {{recipe}}
         <form action="/recipes/create" method="post">
             <input type="hidden" name="user_id" value="{{session.user_id}}">
             <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" value="{{recipe.name}}">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">description</label>
@@ -32,14 +34,22 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Date Made</label>
-                <input type="date" class="form-control" id="exampleInputPassword1" name="date_made">
+                <input type="date" class="form-control" id="exampleInputPassword1" name="date_made" value="{{recipe.date_made}}">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Under 30</label><br>
-                <input type="radio" id="yes" name="under_30" value="1">
+                {% if recipe.under_30 %}
+                <input type="radio" id="yes" name="under_30" value="1" checked>
                 <label for="yes">yes</label><br>
                 <input type="radio" id="no" name="under_30" value="0">
                 <label for="no">no</label><br>
+                {% else %}
+                <input type="radio" id="yes" name="under_30" value="1">
+                <label for="yes">yes</label><br>
+                <input type="radio" id="no" name="under_30" value="0" checked>
+                <label for="no">no</label><br>
+                    
+                {% endif %}
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
