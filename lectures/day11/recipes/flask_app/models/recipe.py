@@ -13,13 +13,14 @@ class Recipe:
         self.date_made = data['date_made']
         self.under_30 = data['under_30']
         self.user_id = data['user_id']
+        self.number_served = data['number_served']
         self.first_name = data['first_name']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
         
     @classmethod
     def save(cls, data):
-        query = "INSERT INTO recipes (name, description, instructions, date_made, under_30, user_id) VALUES (%(name)s, %(description)s, %(instructions)s, %(date_made)s, %(under_30)s, %(user_id)s)"
+        query = "INSERT INTO recipes (name, description, instructions, date_made, under_30, number_served, user_id) VALUES (%(name)s, %(description)s, %(instructions)s, %(date_made)s, %(under_30)s, %(number_served)s, %(user_id)s)"
         return connectToMySQL(DATABASE).query_db(query, data)
     
     @classmethod
@@ -41,7 +42,7 @@ class Recipe:
     
     @classmethod
     def update(cls, data):
-        query = "UPDATE recipes SET name = %(name)s, description = %(description)s, instructions = %(instructions)s, date_made = %(date_made)s, under_30 = %(under_30)s WHERE recipes.id = %(id)s;"
+        query = "UPDATE recipes SET name = %(name)s, description = %(description)s, instructions = %(instructions)s, date_made = %(date_made)s, under_30 = %(under_30)s, number_served = %(number_served)s WHERE recipes.id = %(id)s;"
         return connectToMySQL(DATABASE).query_db(query, data)
         
     @staticmethod
@@ -61,5 +62,8 @@ class Recipe:
             is_valid = False
         if recipe['date_made'] == '':
             flash("Please select a date")
+            is_valid = False
+        if int(recipe['number_served']) <= 0:
+            flash("Recipe has to serve at least 1 person")
             is_valid = False
         return is_valid
