@@ -18,8 +18,9 @@
     {% endwith %}
     <h1>Edit recipe</h1>
     {{recipe}}
-        <form action="/recipes/create" method="post">
+        <form action="/recipes/update" method="post">
             <input type="hidden" name="user_id" value="{{session.user_id}}">
+            <input type="hidden" name="id" value="{{recipe.id}}">
             <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" value="{{recipe.name}}">

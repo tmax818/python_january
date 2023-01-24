@@ -36,13 +36,30 @@ class Recipe:
     def get_one(cls, data):
         query = "SELECT * FROM recipes JOIN users ON users.id = recipes.user_id WHERE recipes.id = %(id)s;"
         result = connectToMySQL(DATABASE).query_db(query, data)
-        pprint(result)
-        return Recipe(result)
+        print(result[0])
+        return Recipe(result[0])
+    
+    @classmethod
+    def update(cls, data):
+        query = "UPDATE recipes SET name = %(name)s, description = %(description)s, instructions = %(instructions)s, date_made = %(date_made)s, under_30 = %(under_30)s WHERE recipes.id = %(id)s;"
+        return connectToMySQL(DATABASE).query_db(query, data)
         
     @staticmethod
     def validate_recipe(recipe):
         is_valid = True
         if len(recipe['name']) < 3:
             flash("Name must be three chars")
+            is_valid = False
+        if len(recipe['description']) < 3:
+            flash("Desc must be three chars")
+            is_valid = False
+        if len(recipe['instructions']) < 3:
+            flash("INst must be three chars")
+            is_valid = False
+        if not 'under_30' in recipe:
+            flash("must select option for under 30 min.")
+            is_valid = False
+        if recipe['date_made'] == '':
+            flash("Please select a date")
             is_valid = False
         return is_valid

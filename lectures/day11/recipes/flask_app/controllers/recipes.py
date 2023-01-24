@@ -29,4 +29,10 @@ def edit_recipe(id):
     data = {'id': id}
     return render_template("edit_recipe.html", recipe = Recipe.get_one(data))
     
-    
+@app.route('/recipes/update', methods = ["POST"])
+def update_recipe():
+    print(request.form)
+    if not Recipe.validate_recipe(request.form):
+        return redirect(f"/recipes/edit/{request.form['id']}")
+    Recipe.update(request.form)
+    return redirect('/recipes') 
