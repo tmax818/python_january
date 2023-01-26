@@ -1,26 +1,31 @@
 /* 
-  Given a string,
-  return a new string with the duplicates excluded
-  Bonus: Keep only the last instance of each character.
+
+Given an array of ints representing a line of people where the space between
+indexes is 1 foot, with 0 meaning no one is there and 1 meaning someone is in
+that space,
+return whether or not there is at least 6 feet separating every person.
+Bonus: O(n) linear time (avoid nested loops that cause re-visiting indexes).
 */
 
-const str1 = "abcABC";
-const expected1 = "abcABC";
+const queue1 = [0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1];
+const expected1 = false;
 
-const str2 = "helloo";
-const expected2 = "helo";
+const queue2 = [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1];
+const expected2 = true;
 
-const str3 = "";
-const expected3 = "";
+const queue3 = [1, 0, 0, 0, 0, 0, 0, 0, 1];
+const expected3 = true;
 
-const str4 = "aa";
-const expected4 = "a";
+const queue4 = [];
+const expected4 = true;
 
 /**
- * De-dupes the given string.
+ * Determines whether each occupied space in the line of people is separated by
+ * 6 empty spaces.
  * - Time: O(?).
  * - Space: O(?).
- * @param {string} str A string that may contain duplicates.
- * @returns {string} The given string with any duplicate characters removed.
+ * @param {Array<0|1>} queue
+ * @returns {Boolean}
  */
-function stringDedupe(str) {}
+function socialDistancingEnforcer(queue) {}
+>>>>>>> c3989bd5e7f1059f74b8e48ad52e913bbbfb9e92

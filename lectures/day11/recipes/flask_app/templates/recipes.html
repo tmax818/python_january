@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Recipes</title>
+</head>
+<body>
+    <h1>Welcome back {{session.first_name}}</h1>
+    <h3>user_id = {{session.user_id}}</h3>
+    
+    <a href="/logout">logout</a>
+    <a href="/recipes/new">create recipe</a>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Under 30</th>
+            <th scope="col">Posted By</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for recipe in recipes  %}
+          <tr>
+            <th>{{recipe.name}}</th>
+            <td>
+              {% if recipe.under_30 %}
+                Yes
+              {% else %}
+                No
+              {% endif %}
+            </td>
+            <td>{{recipe.first_name}}</td>
+            <td>
+              <a href="/recipes/{{recipe.id}}">view recipe</a>
+              {% if recipe.user_id == session.user_id %}
+              |<a href="/recipes/edit/{{recipe.id}}">edit</a>|
+              <a href="">delete</a>
+              {% endif %}
+            </td>
+            <td>{{recipe.user_id}}</td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+
+</body>
+</html>

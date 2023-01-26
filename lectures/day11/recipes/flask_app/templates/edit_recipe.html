@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>New Recipe</title>
+</head>
+<body>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}    
+        {% if messages %}                        
+            {% for message in messages %}     
+                <p>{{message}}</p>          
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <h1>Edit recipe</h1>
+    {{recipe}}
+        <form action="/recipes/update" method="post">
+            <input type="hidden" name="user_id" value="{{session.user_id}}">
+            <input type="hidden" name="id" value="{{recipe.id}}">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" value="{{recipe.name}}">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">description</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="description" value="{{recipe.description}}">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">instructions</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" name="instructions" value="{{recipe.instructions}}">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Date Made</label>
+                <input type="date" class="form-control" id="exampleInputPassword1" name="date_made" value="{{recipe.date_made}}">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">number served</label>
+                <input type="number" class="form-control" id="exampleInputPassword1" name="number_served" value="{{recipe.number_served}}">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Under 30</label><br>
+                {% if recipe.under_30 %}
+                <input type="radio" id="yes" name="under_30" value="1" checked>
+                <label for="yes">yes</label><br>
+                <input type="radio" id="no" name="under_30" value="0">
+                <label for="no">no</label><br>
+                {% else %}
+                <input type="radio" id="yes" name="under_30" value="1">
+                <label for="yes">yes</label><br>
+                <input type="radio" id="no" name="under_30" value="0" checked>
+                <label for="no">no</label><br>
+                    
+                {% endif %}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    </body>
+</html>
