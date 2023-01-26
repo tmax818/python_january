@@ -28,4 +28,4 @@ const expected4 = true;
  * @returns {Boolean}
  */
 function socialDistancingEnforcer(queue) {}
->>>>>>> c3989bd5e7f1059f74b8e48ad52e913bbbfb9e92
+
