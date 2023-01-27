@@ -1,4 +1,5 @@
 /* 
+
 Given an array of ints representing a line of people where the space between
 indexes is 1 foot, with 0 meaning no one is there and 1 meaning someone is in
 that space,
@@ -27,3 +28,4 @@ const expected4 = true;
  * @returns {Boolean}
  */
 function socialDistancingEnforcer(queue) {}
+
