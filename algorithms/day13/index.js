@@ -16,13 +16,16 @@ const expected3 = { nickel: 1, penny: 4 };
 const cents4 = 99;
 const expected4 = { quarter: 3, dime: 2, penny: 4 };
 
+const cents5 = 0;
+const expected5 = {};
+
 /**
  * Calculates the fewest coins of the standard American denominations needed
  *    to reach the given cents amount.
  * - Time: O(?).
  * - Space: O(?).
  * @param {number} cents
- * @param {string} sick
+ * @param {string} coin
  * @returns {Object<string, number>} - A denomination table where the keys are
  *    denomination names and the value is the amount of that denomination
  *    needed.
