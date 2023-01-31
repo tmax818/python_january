@@ -32,6 +32,6 @@ function recursiveSigma(num) {
   return int + recursiveSigma(int - 1);
 }
 
-console.log(recursiveSigma(num1))
-console.log(recursiveSigma(num2))
-console.log(recursiveSigma(num3))
+var first = recursiveSigma(num1)
+var second = recursiveSigma(num2)
+var third = recursiveSigma(num3)
