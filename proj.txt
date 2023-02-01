@@ -1,0 +1,15 @@
+# tuck
+# project: custom cookbook 
+# goals: finish pages for cookbook
+
+# andriy
+# project: app listen to dj 
+# goals: emplement m:n for dj
+
+# jordan
+# project: weather
+# goal: display recent searches, display weather info with image
+
+# veronika
+# project: travel website
+# goal: get videos to play.

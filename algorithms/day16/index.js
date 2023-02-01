@@ -19,6 +19,24 @@ const expected3 = 0;
  * @param {Array<number>} nums
  * @returns {number} The sum of the given nums.
  */
-function sumArr(nums) {}
+function sumArr(nums) {
+  let sum = 0
+  for(let i = 0; i < nums.length; i++){
+    sum += nums[i]
+  }
+  return sum
+}
+
+function sumArrRec(nums = [], i = 0 ){
+    // base case
+   if(!nums[i]){
+                    //3
+      // if(i === nums.length){
+      return 0;
+    }
+    return nums[i] + sumArrRec(nums, i + 1)
+}
+
+console.log(sumArrRec([1, 2, 3]))
 
 /*****************************************************************************/
