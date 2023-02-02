@@ -1,6 +1,7 @@
 # tuck
 # project: custom cookbook 
 # goals: finish pages for cookbook
+# goals2: finish today MVP
 
 # andriy
 # project: app listen to dj 
@@ -13,3 +14,11 @@
 # veronika
 # project: travel website
 # goal: get videos to play.
+
+# Josh
+# project: sound cloud, meetup, skateboard design
+# goal: pick an idea 
+
+# Eric
+# project: friends store
+# goal: layout for the site.

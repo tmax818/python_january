@@ -31,6 +31,9 @@ const expected3 = 1;
  *    floor decimals.
  * @returns {number} The result of !n.
  */
-function factorial(n) {}
+function factorial(n) {
+
+    return factorial(n -1)
+}
 
 /*****************************************************************************/
