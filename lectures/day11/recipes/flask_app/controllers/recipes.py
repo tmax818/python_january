@@ -1,11 +1,8 @@
 from flask_app import app, render_template, redirect, session, request
 from flask_app.models.recipe import Recipe
 
-@app.route('/recipes')
-def recipes():
-    if 'user_id' not in session:
-        return redirect('/logout')
-    return render_template('recipes.html', recipes = Recipe.get_all())
+
+#//! CREATE
 
 @app.route('/recipes/new')
 def new_recipe():
@@ -19,10 +16,22 @@ def create_recipe():
     Recipe.save(request.form)
     return redirect('/recipes')
 
+#//! READ ALL
+
+@app.route('/recipes')
+def recipes():
+    if 'user_id' not in session:
+        return redirect('/logout')
+    return render_template('recipes.html', recipes = Recipe.get_all())
+
+#//! READ ONE
+
 @app.route('/recipes/<int:id>')
 def show_recipe(id):
     data = {'id': id}
     return render_template("show_recipe.html", recipe = Recipe.get_one(data))
+
+#//! UPDATE
 
 @app.route("/recipes/edit/<int:id>")
 def edit_recipe(id):
@@ -36,3 +45,5 @@ def update_recipe():
         return redirect(f"/recipes/edit/{request.form['id']}")
     Recipe.update(request.form)
     return redirect('/recipes') 
+
+#//! DELETE
